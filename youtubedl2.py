@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 from yt_dlp import YoutubeDL
 import os
-import subprocess
 
 #intällningar för mp3
 mp3 = {
@@ -42,8 +41,7 @@ def logo():
 /_____/_____/____/_/|_|     
    Luffarsoft© 2023             
         """)
-            
-        
+   
 def selectVariable(name):
     return variables[name]
     
