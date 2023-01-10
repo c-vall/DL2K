@@ -1,36 +1,10 @@
 from __future__ import unicode_literals
 from yt_dlp import YoutubeDL
 import os
+from formatsettings import *
 
-#intällningar för mp3
-mp3 = {
-    'format': 'bestaudio/best',
-    'outtmpl': '/mp3/%(title)s.%(ext)s',
-    'postprocessors': [{
-        'key': 'FFmpegExtractAudio',
-        'preferredcodec': 'mp3',
-        'preferredquality': '320',
-    }],
-}
-
-#inställningar för webm 
-webm = {
-    'format': 'best',
-    'outtmpl': '/webm/%(title)s.%(ext)s',
-    'postprocessors': [{
-        'key': 'FFmpegVideoConvertor',
-        'preferedformat': 'webm',
-    }],
-}
-
-variables = {
-    'mp3': mp3,
-    'webm': webm
-}
-
+variables = {'mp3': mp3,'webm': webm}
 getDir = os.getcwd()  
-mp3Dir = "\mp3"
-webmDir = "\webm"
 
 def logo():
     print("""\
