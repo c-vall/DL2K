@@ -1,3 +1,4 @@
-# DL2K
+## Dependencies
 
-It is what it is
+- pip install yt-dlp
+* https://ffmpeg.org/download.html
