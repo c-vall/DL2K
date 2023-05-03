@@ -24,4 +24,18 @@ webm = {
     }],
     }
 #Directory
-webmDir = "\webm"    
+webmDir = "\webm"   
+
+
+#MP4
+mp4 = {
+    'format': 'best',
+    'outtmpl': '/mp4/%(title)s.%(ext)s',
+    'postprocessors': 
+    [{
+        'key': 'FFmpegVideoConvertor',
+        'preferedformat': 'mp4',
+    }],
+    }
+#Directory
+mp4Dir = "\mp4"    

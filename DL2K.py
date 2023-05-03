@@ -3,18 +3,17 @@ from yt_dlp import YoutubeDL
 import os
 from formatsettings import *
 
-variables = {'mp3': mp3,'webm': webm}
+variables = {'mp3': mp3,'webm': webm, 'mp4' : mp4}
 getDir = os.getcwd()  
 
-def logo():
-    print("""\
-    ____  __   ___   __  
-   / __ \/ /  |__ \ / /__
-  / / / / /   __/ // //_/
- / /_/ / /___/ __// ,<   
-/_____/_____/____/_/|_|     
-   Luffarsoft© 2023             
-        """)
+logo = """\
+                                    ____  __   ___   __  
+                                   / __ \/ /  |__ \ / /__
+                                  / / / / /   __/ // //_/
+                                 / /_/ / /___/ __// ,<   
+                                /_____/_____/____/_/|_|     
+                                   Luffarsoft© 2023         
+        """
    
 def selectVariable(name):
     return variables[name]
@@ -28,12 +27,17 @@ def openDirectory(format):
         os.system(f'start {os.path.realpath(getDir+mp3Dir)}')
     elif format == 'webm':
         os.system(f'start {os.path.realpath(getDir+webmDir)}')
+    elif format == 'mp4':
+        os.system(f'start {os.path.realpath(getDir+mp4Dir)}')
         
 def main():
     while True:
-        logo() 
-        url = input('URL: ')
-        format = input('Format: ')
+        os.system('color 0B')
+        cmd = 'mode 90,8'
+        os.system(cmd)
+        print(logo)
+        url = input('URL► ')
+        format = input('Format► ')
         downloadContent(url, selectVariable(format))
         openDirectory(format)
         #os.system('cls')
