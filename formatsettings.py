@@ -39,3 +39,16 @@ mp4 = {
     }
 #Directory
 mp4Dir = "\mp4"    
+
+#WAV
+wav = {
+    'format': 'best',
+    'outtmpl': '/wav/%(title)s.%(ext)s',
+    'postprocessors': 
+    [{
+        'key': 'FFmpegVideoConvertor',
+        'preferedformat': 'wav',
+    }],
+    }
+#Directory
+wavDir = "\wav"    

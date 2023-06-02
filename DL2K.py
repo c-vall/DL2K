@@ -3,7 +3,7 @@ from yt_dlp import YoutubeDL
 import os
 from formatsettings import *
 
-variables = {'mp3': mp3,'webm': webm, 'mp4' : mp4}
+variables = {'mp3': mp3,'webm': webm, 'mp4' : mp4, 'wav' : wav}
 getDir = os.getcwd()  
 
 logo = """\
@@ -23,13 +23,16 @@ def downloadContent(link, format):
         ydl.download(link)
 
 def openDirectory(format):
-    if format == 'mp3':
-        os.system(f'start {os.path.realpath(getDir+mp3Dir)}')
-    elif format == 'webm':
-        os.system(f'start {os.path.realpath(getDir+webmDir)}')
-    elif format == 'mp4':
-        os.system(f'start {os.path.realpath(getDir+mp4Dir)}')
-        
+    match format:
+        case 'mp3':
+            os.system(f'start {os.path.realpath(getDir+mp3Dir)}')
+        case 'webm':
+            os.system(f'start {os.path.realpath(getDir+webmDir)}')
+        case 'mp4':
+            os.system(f'start {os.path.realpath(getDir+mp4Dir)}')
+        case 'wav':
+            os.system(f'start {os.path.realpath(getDir+wavDir)}')
+
 def main():
     while True:
         os.system('color 0B')
@@ -40,7 +43,6 @@ def main():
         format = input('Format► ')
         downloadContent(url, selectVariable(format))
         openDirectory(format)
-        #os.system('cls')
         
 if __name__ == '__main__':
     main()
