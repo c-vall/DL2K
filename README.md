@@ -1,6 +1,6 @@
 ## Dependencies
 
 - pip install yt-dlp
-* https://ffmpeg.org/download.html
+* https://ffmpeg.org/download.html Full Build
 
 wowie
