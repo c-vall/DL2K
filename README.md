@@ -1,5 +1,5 @@
 ## Dependencies
-
+- Python 3.10
 - pip install yt_dlp
 * https://www.gyan.dev/ffmpeg/builds/ full build
 
