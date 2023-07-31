@@ -36,7 +36,6 @@ def openDirectory(format):
 def main():
     while True:
         os.system('color 0B')
-        os.system(cmd)
         print(logo)
         url = input('URL► ')
         format = input('Format► ')
