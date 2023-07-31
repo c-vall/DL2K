@@ -1,6 +1,6 @@
 ## Dependencies
 
 - pip install yt_dlp
-* [https://ffmpeg.org/download.html](https://www.gyan.dev/ffmpeg/builds/)https://www.gyan.dev/ffmpeg/builds/ Full Build
+* https://www.gyan.dev/ffmpeg/builds/ ffmpeg-git-full.7z
 
 wowie
