@@ -1,6 +1,8 @@
 ## Dependencies
-
+- Python 3.10
 - pip install yt_dlp
-* https://ffmpeg.org/download.html Full Build
+* https://www.gyan.dev/ffmpeg/builds/ full build
+
+  - Place ffmpeg.exe, ffplay.exe, ffprobe.exe (located in the bin folder), in the same directory as the "DL2K.py" and "formatsettings.py"
 
 wowie
